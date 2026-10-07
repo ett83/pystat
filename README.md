@@ -1,53 +1,45 @@
-# Statistik mit Python – Einstieg
+# Statistik mit Python
 
-Material für eine erste Statistik-Veranstaltung mit Jupyter Notebook.
+Dieses Repository enthält Materialien für einen Einstieg in die deskriptive Statistik mit Python und Jupyter.
+
+Der erste Abschnitt knüpft an die in Vorlesung 0 behandelten Vektoren und das Summenzeichen an. Anschließend wird ein synthetischer Datensatz mit Messwerten eines Web-Systems ausgewertet.
 
 ## Dateien
 
-- `Statistik_mit_Python_Studierende.ipynb` – Version mit kleinen Aufgaben
-- `Statistik_mit_Python_Dozent.ipynb` – Lösungen und Dozentenhinweise
-- `data/api_requests.csv` – reproduzierbarer Beispieldatensatz
-- `requirements.txt` – Python-Abhängigkeiten für Binder
+- `Statistik_mit_Python_Studierende.ipynb` – Notebook für die Lehrveranstaltung mit Übungsaufgaben
+- `Statistik_mit_Python_Dozent.ipynb` – Notebook mit Lösungen und Hinweisen zur Durchführung
+- `data/api_requests.csv` – Beispieldatensatz
+- `requirements.txt` – benötigte Python-Pakete
+- `Ablaufplan.md` – kompakter Zeit- und Themenplan
 
-## Lokal / HTW-JupyterHub
+## Themen
 
-1. Den gesamten Ordner hochladen.
-2. `Statistik_mit_Python_Studierende.ipynb` oder die Dozentenversion öffnen.
-3. Kernel `Python 3` wählen.
-4. Zellen mit `Shift + Enter` ausführen.
+- Vektoren und Summen in Python
+- Grundgesamtheit, Merkmale, Ausprägungen und Wertemengen
+- nominal, ordinal und metrisch skalierte Merkmale
+- diskrete, stetige und quasi-stetige Merkmale
+- Daten einlesen, prüfen und filtern
+- absolute und relative Häufigkeiten, Modalwert
+- arithmetisches Mittel, Median, unteres und oberes Quartil, Interquartilsabstand und empirische Standardabweichung
+- Histogramm und Boxplot
+- Gruppenvergleiche
+- Streudiagramm und Pearson-Korrelationskoeffizient
+- Zufallsstichproben und zufällige Schwankung von Stichprobenmittelwerten
 
-Falls Pakete auf dem JupyterHub fehlen, können sie je nach Serverkonfiguration in einer eigenen Umgebung installiert werden. Das Notebook selbst benötigt nur NumPy, pandas und Matplotlib.
+## Verwendung auf einem Jupyter-System
 
-## Binder
+Den gesamten Repository-Inhalt bereitstellen und anschließend das gewünschte Notebook öffnen. Der Datensatz wird über den relativen Pfad `data/api_requests.csv` geladen.
 
-Binder benötigt ein öffentlich erreichbares Git-Repository.
+## Verwendung mit Binder
 
-1. Diesen Ordner in ein öffentliches GitHub-/GitLab-Repository legen.
-2. Auf https://mybinder.org gehen.
-3. Repository-URL eintragen.
-4. Als Datei/Path `Statistik_mit_Python_Studierende.ipynb` angeben.
-5. Binder-Link an die Studierenden verteilen.
+Das Repository muss öffentlich erreichbar sein. Auf `https://mybinder.org` kann das GitHub-Repository angegeben werden.
 
-Beispiel für ein GitHub-Repository:
+Für einen direkten Start des Studierenden-Notebooks kann ein Link nach folgendem Schema verwendet werden:
 
-`https://mybinder.org/v2/gh/USERNAME/REPOSITORY/main?labpath=Statistik_mit_Python_Studierende.ipynb`
+```text
+https://mybinder.org/v2/gh/USERNAME/REPOSITORY/HEAD?urlpath=lab/tree/Statistik_mit_Python_Studierende.ipynb
+```
 
-## Didaktischer Ablauf
+`USERNAME` und `REPOSITORY` sind durch den GitHub-Benutzernamen und den Repository-Namen zu ersetzen.
 
-Der rote Faden lautet:
-
-**Frage → Daten auswählen → Kennzahl/Diagramm → Interpretation**
-
-Inhalte:
-
-1. DataFrame laden und inspizieren
-2. Filtern
-3. Häufigkeiten
-4. Mittelwert, Median, Standardabweichung, Quantile
-5. Histogramm und Boxplot
-6. Gruppierte Auswertungen
-7. Scatterplot und Korrelation
-8. Stichprobenvariabilität
-9. Abschluss-Challenge
-
-Der Datensatz ist synthetisch und mit festem Zufalls-Seed erzeugt; dadurch sind die Resultate reproduzierbar.
+Die Binder-Sitzung ist temporär. Bearbeitungen werden nicht automatisch in das GitHub-Repository zurückgeschrieben.
